@@ -51,8 +51,169 @@ celery -A lenme beat -l debug
 ## Database Diagram
 ![Database ER diagram (Lenme)](https://user-images.githubusercontent.com/23037901/209165258-c3c37d05-1cd6-4489-867b-b3c001a652a5.png)
 
+## API Reference
 
-## API Documentation
+#### Register Borrower
+
+```http
+  POST /accounts/api/register/borrower
+```
+
+Body 
+```json
+{
+    "username": "joeshindy",
+    "email": "shindi.joe@gmail.com",
+    "password": "Password@123"
+}
+```
+
+#### Login Borrower
+
+```http
+  Post /accounts/api/auth/borrower/login/
+```
+
+Body 
+```json
+{
+    "username": "joeshindy",
+    "email": "shindi.joe@gmail.com",
+    "password": "Password@123"
+}
+```
+
+#### Register Investor
+
+```http
+  POST /accounts/api/register/investor
+```
+
+Body 
+```json
+{
+    "username": "joeshindy",
+    "email": "shindi.joe@gmail.com",
+    "password": "Password@123"
+}
+```
+
+#### Login Investor
+
+```http
+  Post /accounts/api/auth/investor/login/
+```
+
+Body 
+```json
+{
+    "username": "joeshindy",
+    "email": "shindi.joe@gmail.com",
+    "password": "Password@123"
+}
+```
+
+#### Create Loan Request
+
+```http
+  Post /loan/api/create
+```
+
+Body 
+```json
+{
+    "borrower": 13,
+    "amount": 5000,
+    "period": 6
+}
+```
+#### Create Loan Offer Request
+
+```http
+  Post /loan/api/offer
+```
+
+Body 
+```json
+{
+    "loan": 11,
+    "investor": 14,
+    "annual_interest": 15
+}
+
+```
+#### Accept Loan Offer Request
+
+```http
+  Post /loan/api/offer/accept
+```
+
+Body 
+```json
+{
+    "offer": 9,
+    "loan": 11
+}
+```
+#### Reject Loan Offer Request
+
+```http
+  Post /loan/api/offer/reject
+```
+
+Body 
+```json
+{
+    "offer": 9,
+    "loan": 11
+}
+```
+#### Settle Loan Payment
+
+```http
+  Post /loan/api/payment/settle
+```
+
+Body 
+```json
+{
+    "payment": 2
+}
+```
+
+#### Get Loans
+
+```http
+  GET /loan/api/list
+
+  Gets loan requests based on user token sent in authorization request
+```
+
+#### Get Loan Offers
+
+```http
+  GET /loan/api/list/<int:loan_id>/offers
+```
+
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `loan_id`      | `integer` | **Required**. Id of loan to its offers |
+
+#### Get Loan Payments
+
+```http
+  GET /loan/api/list/<int:loan_id>/payments
+```
+
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `loan_id`      | `integer` | **Required**. Id of loan to its payments |
+
+
+
+You can find detailed documentation through this link:
 
 [API Documentation](https://documenter.getpostman.com/view/12485266/2s8Z6u5FMq)
 
