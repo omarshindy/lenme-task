@@ -5,6 +5,7 @@ from .accept_loan_offer import AcceptLoanOfferAPi
 from .settle_payment import SettlePaymentAPi
 from .reject_loan_offer import RejectLoanOfferAPi
 from .offer_list import OffersListAPI
+from .loan_payments_list import LoanPaymentsListAPI
 
 __all__ = [
     'LoanListAPI',
@@ -13,5 +14,6 @@ __all__ = [
     'AcceptLoanOfferAPi',
     'SettlePaymentAPi',
     'RejectLoanOfferAPi',
-    'OffersListAPI'
+    'OffersListAPI',
+    'LoanPaymentsListAPI'
 ]
