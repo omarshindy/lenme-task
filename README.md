@@ -85,7 +85,7 @@ Body
 
 #### Register Investor
 
-```json
+```http
   POST /accounts/api/register/investor
 ```
 
@@ -213,7 +213,8 @@ Body
 
 
 
-You can find detailed documentation through this link:
+
+## You can find detailed documentation through this link:
 
 [API Documentation](https://documenter.getpostman.com/view/12485266/2s8Z6u5FMq)
 
