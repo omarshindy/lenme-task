@@ -55,7 +55,7 @@ celery -A lenme beat -l debug
 
 #### Register Borrower
 
-```http
+```
   POST /accounts/api/register/borrower
 ```
 
@@ -70,8 +70,8 @@ Body
 
 #### Login Borrower
 
-```http
-  Post /accounts/api/auth/borrower/login/
+```
+  POST /accounts/api/auth/borrower/login/
 ```
 
 Body 
@@ -85,7 +85,7 @@ Body
 
 #### Register Investor
 
-```http
+```
   POST /accounts/api/register/investor
 ```
 
@@ -100,7 +100,7 @@ Body
 
 #### Login Investor
 
-```http
+```
   Post /accounts/api/auth/investor/login/
 ```
 
@@ -115,7 +115,7 @@ Body
 
 #### Create Loan Request
 
-```http
+```
   Post /loan/api/create
 ```
 
@@ -129,7 +129,7 @@ Body
 ```
 #### Create Loan Offer Request
 
-```http
+```
   Post /loan/api/offer
 ```
 
@@ -144,7 +144,7 @@ Body
 ```
 #### Accept Loan Offer Request
 
-```http
+```
   Post /loan/api/offer/accept
 ```
 
@@ -157,7 +157,7 @@ Body
 ```
 #### Reject Loan Offer Request
 
-```http
+```
   Post /loan/api/offer/reject
 ```
 
@@ -170,7 +170,7 @@ Body
 ```
 #### Settle Loan Payment
 
-```http
+```
   Post /loan/api/payment/settle
 ```
 
@@ -183,7 +183,7 @@ Body
 
 #### Get Loans
 
-```http
+```
   GET /loan/api/list
 
   Gets loan requests based on user token sent in authorization request
@@ -191,7 +191,7 @@ Body
 
 #### Get Loan Offers
 
-```http
+```
   GET /loan/api/list/<int:loan_id>/offers
 ```
 
@@ -202,7 +202,7 @@ Body
 
 #### Get Loan Payments
 
-```http
+```
   GET /loan/api/list/<int:loan_id>/payments
 ```
 
