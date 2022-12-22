@@ -85,7 +85,7 @@ Body
 
 #### Register Investor
 
-```http
+```json
   POST /accounts/api/register/investor
 ```
 
